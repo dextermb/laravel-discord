@@ -1,0 +1,25 @@
+{
+  "name": "dextermb/discord",
+  "description": "Discord helper for Laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dexter Marks-Barber",
+      "email": "dexter@marks-barber.co.uk"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "laravel/framework": "^11.21"
+  },
+  "autoload": {
+    "psr-4": {
+      "Discord\\": "Discord/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
