@@ -1,7 +1,6 @@
 {
   "name": "dextermb/discord",
   "description": "Discord helper for Laravel",
-  "version": "1.0.0",
   "type": "library",
   "license": "MIT",
   "authors": [
