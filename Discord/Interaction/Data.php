@@ -46,4 +46,18 @@ class Data
         return $value;
     }
   }
+
+  public function getOption(string $key, mixed $default = null): Option
+  {
+    /** @var Option|null */
+    $option = $this->options->first(
+      fn(Option $option) => $option->name === $key
+    );
+
+    if (is_null($option)) {
+      return Option::from(["name" => $key, "value" => $default]);
+    }
+
+    return $option;
+  }
 }
