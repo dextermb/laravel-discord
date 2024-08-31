@@ -13,7 +13,7 @@ abstract class Response
   /** @var InteractionResponseType */
   public $type;
 
-  public static function make()
+  public static function make(): static
   {
     return new static();
   }

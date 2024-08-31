@@ -25,7 +25,7 @@ class Option
   /** @var bool */
   public $focused;
 
-  protected function transform(string $key, mixed $value)
+  protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
       case "type":

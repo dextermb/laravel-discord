@@ -15,7 +15,7 @@ class Choice
   /** @var mixed */
   public $value;
 
-  public static function make(): self
+  public static function make(): static
   {
     return new static();
   }

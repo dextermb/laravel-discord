@@ -33,7 +33,7 @@ abstract class Message extends Response
   /** @var mixed */
   public $poll;
 
-  public function data()
+  public function data(): array
   {
     return [
       "tts" => $this->tts,

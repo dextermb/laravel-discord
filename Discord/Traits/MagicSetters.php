@@ -6,7 +6,7 @@ use Discord\Exceptions\NotImplementedException;
 
 trait MagicSetters
 {
-  public function __call(string $name, array $arguments): self
+  public function __call(string $name, array $arguments): static
   {
     if (property_exists($this, $name)) {
       $this->{$name} = $arguments[0];

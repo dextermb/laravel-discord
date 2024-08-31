@@ -31,7 +31,7 @@ class Data
   /** @var int */
   public $targetId;
 
-  protected function transform(string $key, mixed $value)
+  protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
       case "type":

@@ -47,12 +47,12 @@ abstract class Command
   /** @var string */
   public $version;
 
-  public static function make(): self
+  public static function make(): static
   {
     return new static();
   }
 
-  public function __construct()
+  public function __construct(): void
   {
     $this->required = false;
     $this->options = collect();
@@ -60,21 +60,21 @@ abstract class Command
     $this->contexts = collect();
   }
 
-  public function addOption(Option $option): self
+  public function addOption(Option $option): static
   {
     $this->options = $this->options->push($option);
 
     return $this;
   }
 
-  public function addIntegrationType(IntegrationType $integrationType): self
+  public function addIntegrationType(IntegrationType $integrationType): static
   {
     $this->integrationTypes = $this->integrationTypes->push($integrationType);
 
     return $this;
   }
 
-  public function addContext(ContextType $context): self
+  public function addContext(ContextType $context): static
   {
     $this->contexts = $this->contexts->push($context);
 

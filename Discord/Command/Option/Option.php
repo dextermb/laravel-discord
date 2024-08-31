@@ -46,7 +46,7 @@ abstract class Option
   /** @var int */
   public $maxLength;
 
-  public static function make(): self
+  public static function make(): static
   {
     return new static();
   }
@@ -59,28 +59,28 @@ abstract class Option
     $this->channelTypes = collect();
   }
 
-  public function choices(Choice ...$choices): self
+  public function choices(Choice ...$choices): static
   {
     $this->choices = collect($choices);
 
     return $this;
   }
 
-  public function addChoice(Choice $choice): self
+  public function addChoice(Choice $choice): static
   {
     $this->choices = $this->choices->push($choice);
 
     return $this;
   }
 
-  public function addOption(Option $option): self
+  public function addOption(Option $option): static
   {
     $this->options = $this->options->push($option);
 
     return $this;
   }
 
-  public function addChannelType(ChannelType $channelType): self
+  public function addChannelType(ChannelType $channelType): static
   {
     $this->channelTypes = $this->channelTypes->push($channelType);
 

@@ -60,7 +60,7 @@ class User
   /** @var array */
   public $avatarDecorationData;
 
-  protected function transform(string $key, mixed $value)
+  protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
       case "premium_type":

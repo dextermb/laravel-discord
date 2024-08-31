@@ -6,7 +6,7 @@ use Str;
 
 trait InjestUserInput
 {
-  public static function from(array $data)
+  public static function from(array $data): static
   {
     $instance = new static();
 
@@ -21,7 +21,7 @@ trait InjestUserInput
     return $instance;
   }
 
-  protected function transform(string $key, mixed $value)
+  protected function transform(string $key, mixed $value): mixed
   {
     return $value;
   }

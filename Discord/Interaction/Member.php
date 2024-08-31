@@ -48,7 +48,7 @@ class Member
   /** @var mixed */
   public $avatarDecorationData;
 
-  protected function transform(string $key, mixed $value)
+  protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
       case "user":

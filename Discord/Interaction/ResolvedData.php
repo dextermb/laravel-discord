@@ -27,7 +27,7 @@ class ResolvedData
   /** @var array */
   public $attachments;
 
-  protected function transform(string $key, mixed $value)
+  protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
       case "users":
