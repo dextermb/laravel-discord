@@ -52,7 +52,7 @@ abstract class Command
     return new static();
   }
 
-  public function __construct(): void
+  public function __construct()
   {
     $this->required = false;
     $this->options = collect();
