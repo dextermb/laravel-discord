@@ -2,7 +2,7 @@
 
 namespace Discord\Enums;
 
-use App\Traits\MatchingValues;
+use Discord\Traits\MatchingValues;
 
 enum InteractionType: int
 {
