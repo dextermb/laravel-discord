@@ -2,7 +2,7 @@
 
 namespace Discord\Traits;
 
-use App\Exceptions\NotImplementedException;
+use Discord\Exceptions\NotImplementedException;
 
 trait MagicSetters
 {
