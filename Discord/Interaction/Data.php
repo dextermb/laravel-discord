@@ -3,6 +3,7 @@
 namespace Discord\Interaction;
 
 use Discord\Enums\CommandType;
+use Discord\Enums\ComponentType;
 use Discord\Traits\InjestUserInput;
 use Illuminate\Support\Collection;
 
@@ -31,11 +32,22 @@ class Data
   /** @var int */
   public $targetId;
 
+  /** @var ComponentType */
+  public $componentType;
+
+  /** @var string */
+  public $customId;
+
+  /** @var mixed */
+  public $values;
+
   protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
       case "type":
         return CommandType::from($value);
+      case "component_type":
+        return ComponentType::from($value);
       case "resolved":
         return ResolvedData::from($value);
       case "options":
