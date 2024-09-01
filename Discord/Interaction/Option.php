@@ -25,6 +25,11 @@ class Option
   /** @var bool */
   public $focused;
 
+  public function __toString(): string
+  {
+    return $this->value;
+  }
+
   protected function transform(string $key, mixed $value): mixed
   {
     switch ($key) {
