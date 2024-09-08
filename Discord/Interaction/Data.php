@@ -62,7 +62,7 @@ class Data
   public function getOption(string $key, mixed $default = null): Option
   {
     /** @var Option|null */
-    $option = $this->options->first(
+    $option = optional($this->options)->first(
       fn(Option $option) => $option->name === $key
     );
 
